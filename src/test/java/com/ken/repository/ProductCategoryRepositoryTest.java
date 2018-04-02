@@ -7,7 +7,6 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Arrays;
 import java.util.List;
@@ -35,7 +34,7 @@ public class ProductCategoryRepositoryTest {
     @Test
     public  void  saveTest1(){
         ProductCategory productCategory=repository.findOne(1);
-        productCategory.setCategoryName("热饮2");
+        //productCategory.setCategoryName("热饮2");
         repository.save(productCategory);
         System.out.println(productCategory.toString());
     }
