@@ -1,5 +1,8 @@
 package com.ken.dataobject;
 
+import lombok.Data;
+import org.hibernate.annotations.DynamicUpdate;
+
 import javax.persistence.*;
 
 /**
@@ -7,6 +10,8 @@ import javax.persistence.*;
  */
 @Entity
 //@Table(name = "product_category")
+@DynamicUpdate
+@Data
 public class ProductCategory {
     /*类目id*/
     @Id
@@ -20,38 +25,11 @@ public class ProductCategory {
     //@Column(name = "category_type")
     private Integer categoryType;
 
-
-
-    public String getCategoryName() {
-        return categoryName;
+    public ProductCategory() {
     }
 
-    public void setCategoryName(String categoryName) {
+    public ProductCategory(String categoryName, Integer categoryType) {
         this.categoryName = categoryName;
-    }
-
-    public Integer getCategoryType() {
-        return categoryType;
-    }
-
-    public void setCategoryType(Integer categoryType) {
         this.categoryType = categoryType;
-    }
-
-    @Override
-    public String toString() {
-        return "ProductCategory{" +
-                "categoryId=" + categoryId +
-                ", categoryName='" + categoryName + '\'' +
-                ", categoryType=" + categoryType +
-                '}';
-    }
-
-    public Integer getCategoryId() {
-        return categoryId;
-    }
-
-    public void setCategoryId(Integer categoryId) {
-        this.categoryId = categoryId;
     }
 }
