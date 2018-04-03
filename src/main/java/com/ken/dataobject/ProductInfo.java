@@ -1,9 +1,9 @@
 package com.ken.dataobject;
 
 import lombok.Data;
-import org.springframework.data.annotation.Id;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.math.BigDecimal;
 
 @Entity
@@ -17,13 +17,14 @@ public class ProductInfo {
 
     private BigDecimal productPrice;
 
-    private Integer productStock;
+    private  Integer productStock;
 
-    private String productDescription;
+    private  String productDescription;
 
-    private String productIcon;
+    private  String productIcon;
 
     private Integer productStatus;
 
-    private Integer categoryType;
+    private  Integer productType;
+
 }
