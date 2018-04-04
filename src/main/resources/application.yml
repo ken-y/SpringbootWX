@@ -8,6 +8,7 @@ spring:
     show-sql: true
 server:
   context-path: /sell
+  port: 8081
 #logging:
 #  pattern:
 #    console:  "%d - %msg%n"

@@ -6,9 +6,10 @@ import com.ken.repository.ProductinfoRespository;
 import com.ken.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public class PorductServiceImpl implements ProductService{
 
     @Autowired
@@ -30,6 +31,6 @@ public class PorductServiceImpl implements ProductService{
 
     @Override
     public ProductInfo save(ProductInfo productInfo) {
-        return null;
+        return respository.save(productInfo);
     }
 }

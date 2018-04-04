@@ -25,6 +25,6 @@ public class ProductInfo {
 
     private Integer productStatus;
 
-    private  Integer productType;
+    private  Integer categoryType;
 
 }
