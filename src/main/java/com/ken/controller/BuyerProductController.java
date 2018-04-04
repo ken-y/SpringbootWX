@@ -1,5 +1,6 @@
 package com.ken.controller;
 
+import com.ken.service.CategoryService;
 import com.ken.service.ProductService;
 import com.ken.vo.ProductInfoVo;
 import com.ken.vo.ProductVo;
@@ -19,7 +20,10 @@ import java.util.Arrays;
 public class BuyerProductController {
 
     @Autowired
-    private ProductService
+    private ProductService productService;
+
+    @Autowired
+    private CategoryService categoryService;
 
     @GetMapping("/list")
     public ResultVo list(){
