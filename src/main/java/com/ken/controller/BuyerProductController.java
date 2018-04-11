@@ -1,6 +1,8 @@
 package com.ken.controller;
 
+
 import com.ken.service.CategoryService;
+
 import com.ken.service.ProductService;
 import com.ken.vo.ProductInfoVo;
 import com.ken.vo.ProductVo;
@@ -35,7 +37,7 @@ public class BuyerProductController {
         ResultVo resultVo= new ResultVo();
         ProductVo productVo= new ProductVo();
         ProductInfoVo productInfoVo=new ProductInfoVo();
-
+        //TODO 不安全访问
         productVo.setProductInfoVoList(Arrays.asList(productInfoVo));
 
         resultVo.setCode(1);
